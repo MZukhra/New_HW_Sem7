@@ -3,28 +3,34 @@
 #   author Zukhra
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-import add_delete
-import search
-import logger
-import csv_mod
+import searching
+import add_read_write
+import txt_format
 
 
 def menu():
     while True:
         z = input(
-            "Введите 1, если хотите найти контакт. \nВведите 2, если хотите отредактировать существующий. \nВведите 3, если хотите добавить новый контакт. \nВведите 4, если хотите удалить контакт. \nДля выхода введите 0")
+            "Введите 1 - посмотреть справочник. \nВведите 2 - найти контакт. \nВведите 3 - добавить новый контакт. \nВведите 4 - удалить контакт. \nВведите 5 - вывод в столбец. \nВведите 0 - выход.\n")
         
         match z:
             case '1':
-                logger.number_logger("Выполняем поиск")
-                search.search()
+                add_read_write.print_csv()
+                print()
             case '2':
-                logger.number_logger("Редактируем запись")
-                csv_mod.write_file_csv(add_delete.add_note())
+                searching.search()
+                print()
             case '3':
-                 add_delete.add_note()
+                a = add_read_write.add_note()
+                add_read_write.writer_too(a)
+                print()
             case '4':
-                return add_delete.delete_note()
+                add_read_write.delete_note_csv()
+                print()
+            case '5':
+                txt_format.write_txt_cols()
+                txt_format.read_txt_col()
+                print()
             case '0':
                 break
 

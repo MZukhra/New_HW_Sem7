@@ -1,4 +1,4 @@
-import User_Interface
+import UI as User_Interface
 
 print('Добрый день')
 

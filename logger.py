@@ -12,8 +12,3 @@ def number_logger(text):
         file.write('{};phonebook;{}\n'
                    .format(time, text))
 
-
-# if __name__ == "__logger__":
-phone_numbers = {'петров': ['вася', '02', 'милиция'],
-                 'иванов': ['Михаил', '03', 'скорая']}
-number_logger(phone_numbers)
