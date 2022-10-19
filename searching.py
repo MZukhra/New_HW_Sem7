@@ -9,7 +9,9 @@ def search():
     surname = input('Введите фамилию: ')
     d = add_read_write.read_csv()
     if surname in d.keys():
-        print(f'{surname} {"".join(d[surname])}')
+        s = d[surname].replace("[", "").replace("'", "").replace(',', "").replace("]", "")
+        print(surname, s)
     else:
         print('Данных нет в списке')
         print('Выход в общее меню')
+

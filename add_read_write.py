@@ -1,3 +1,9 @@
+# Добавление csv
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#   author Yalushkin Alexey
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
 import csv
 import logger
 
@@ -53,8 +59,8 @@ def delete_note_csv():
 def print_csv():
     phone_numbers = read_csv()
     for key in phone_numbers.keys():
-        print(f'{key} {phone_numbers[key]}')
-
-
+        s = phone_numbers[key].replace("[", "").replace("'", "").replace(',', "").replace("]", "")
+        print(key, s)
+    
 
 

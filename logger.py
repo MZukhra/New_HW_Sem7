@@ -1,6 +1,6 @@
 # Menu
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-#   author Zukhra
+#   author Александр Саратовцев
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 from datetime import datetime as dt
